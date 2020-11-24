@@ -1,0 +1,53 @@
+@import url("./Index.css");
+
+body{
+    background-image: url('../images/Background-game.jpg');
+}
+h1{
+    color: var(--color-h1);
+    margin-top: 10%;
+    position: relative;
+    text-align: center;
+}
+hr{
+    margin: 1% 40%;
+}
+#first-p{
+    margin-top: 2%;
+    color: var(--color-h1);
+    position: relative;
+    text-align: center;
+    margin-bottom: 2%;
+}
+i{
+    color: var(--color-h1);  
+    margin: 0.5%;  
+}
+section{
+    display: flex;
+    justify-content: center;
+}
+#second-p{
+    color: var(--color-h1);
+    position: relative;
+    text-align: center;
+    margin: 2% 20%;
+}
+#third-p{
+    margin-top: 2%;
+    color: var(--color-h1);
+    position: relative;
+    text-align: center;
+    margin-bottom: 4%;
+}
+a{
+    width: 10%;
+    text-decoration: none;
+    color: #040938;
+    padding: 20px;
+    border: 1px solid var(--color-h1);
+    border-radius: 20px;
+    background-color: var(--color-h1);
+    text-align: center;
+    position: relative;
+}

@@ -1,0 +1,36 @@
+@import url("/CSS_folder/Index.css");
+
+body{
+    background-image: url('../images/Background-game.jpg');
+}
+h1{
+    color: var(--color-h1);
+    margin-top: 10%;
+    position: relative;
+    text-align: center;
+}
+hr{
+    margin: 1% 45%;
+}
+p{
+    color: var(--color-h1);
+    position: relative;
+    text-align: center;
+    margin: 2% 25%;
+    line-height: 1.5;
+}
+section{
+    display: flex;
+    justify-content: center;
+}
+a{
+    width: 10%;
+    text-decoration: none;
+    color: #040938;
+    padding: 20px;
+    border: 1px solid var(--color-h1);
+    border-radius: 20px;
+    background-color: var(--color-h1);
+    text-align: center;
+    position: relative;
+}
