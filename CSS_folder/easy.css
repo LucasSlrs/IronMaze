@@ -5,7 +5,7 @@ body{
     background-image: url('../images/Background-game.jpg');
 }
 h1{
-    margin-top: 2%;
+    margin-top: 1%;
     color: var(--color-h1);
     position: relative;
     text-align: center;
@@ -20,7 +20,7 @@ footer{
     text-align: center;
     width: 10%;
     border: 1px solid white; 
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
     color: #040938;
     background-color: var(--color-h1);
@@ -29,14 +29,25 @@ hr{
     margin: 1% 35%;
 }
 section{
-    display: flex;
+    display: grid;
     justify-content: center;
 }
 .game-inside{
-
     box-shadow: 10px 5px 5px black;;
     border: 2px solid black;
-    width: 600px;
-    height: 400px;
+    width: 34.2vw;
+    height: 43.2vh;
     position: relative;
+    display: grid;
+    grid-template-columns: repeat(20, 20px [col-start]);
+    justify-content: center;
+}
+.black{
+    background-color: black;
+}
+.map{
+    width: 1.71vw;
+    height: 2.16vh;
+    /* border: 0.2px solid black;
+    background-color: yellow; */
 }
