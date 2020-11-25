@@ -13,6 +13,9 @@ h1{
 footer{
     display: flex;
     justify-content: center;
+    margin: 3%;
+    color: var(--color-h1);
+    font-size: 20px;
 }
 .btn{
     margin: 3%;
@@ -35,19 +38,39 @@ section{
 .game-inside{
     box-shadow: 10px 5px 5px black;;
     border: 2px solid black;
-    width: 34.2vw;
-    height: 43.2vh;
-    position: relative;
+    width: 600px;
+    height: 400px;
+    /* position: relative; */
     display: grid;
-    grid-template-columns: repeat(20, 20px [col-start]);
+    grid-template-columns: repeat(20, 20px [row-start]);
     justify-content: center;
+    
 }
-.black{
-    background-color: black;
+.black-square{
+    background-image: url("../images/dry-clean.png");
 }
 .map{
-    width: 1.71vw;
-    height: 2.16vh;
-    /* border: 0.2px solid black;
-    background-color: yellow; */
+    background-color: var (--color-h1);
+}
+.coin{
+    background-image: url("../images/bitcoin-brands.svg");
+    background-color: gold;
+    animation: rotation 3s infinite linear;
+    border-radius: 40%;
+}
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+.player{
+    background-color: yellow;
+    /* top: 0;
+    left: 0; */
+}
+.end{
+    background-color: turquoise;
 }
