@@ -1,4 +1,4 @@
-const mapEasy = [
+const mapMedium = [
     ["-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"],
     ["-","C","-","-"," "," "," "," "," "," "," "," "," ","-"," "," "," "," "," ","-"],
     ["-"," "," ","-"," ","-","-","-","-","-","-","-"," "," "," ","-","-","-"," ","-"],
@@ -7,23 +7,23 @@ const mapEasy = [
     ["-"," ","-","-"," "," "," "," "," ","-"," ","-"," "," "," "," "," "," "," ","e"],//
     ["-"," ","-","-","-","-","-","-"," ","-"," ","-","-","-","-","-","-","-","-","-"],
     ["-"," "," ","-","-","-","-","-"," ","-"," "," "," "," "," "," "," ","-"," ","-"],
-    ["-","-"," ","-"," "," "," ","-"," ","-","-","-","-","-","-","-"," ","-","-","-"],
-    ["-"," "," ","-"," ","-"," ","-"," ","-"," "," "," "," "," "," "," "," "," ","-"],
+    ["-","-"," "," "," "," "," ","-"," ","-","-","-","-","-","-","-"," ","-","-","-"],
+    ["-"," "," ","-"," ","-"," ","-"," "," "," "," "," "," "," "," "," "," "," ","-"],
     ["-"," ","-","-"," ","-"," ","-"," ","-"," ","-","-"," ","-"," "," ","-"," ","-"],
-    ["-"," "," "," "," ","-"," "," "," ","-"," ","-"," "," ","-"," "," ","-"," ","-"],
+    ["-"," "," ","-"," ","-"," "," "," ","-"," ","-"," "," ","-"," "," ","-"," ","-"],
     ["-"," "," ","-"," ","-"," ","-"," ","-"," "," "," "," ","-"," "," ","-"," ","-"],
-    ["-","-","-","-"," ","-","-","-","-","-","-"," ","-"," ","-","-","-","-"," ","-"],
+    ["-"," ","-","-","-","-","-","-","-","-","-"," ","-"," ","-","-","-","-"," ","-"],
     [" "," "," ","-"," "," "," "," "," "," ","-"," ","-","-"," "," "," ","-"," ","-"],
-    [" ","-"," ","-"," "," ","-","-"," ","-","-"," "," "," "," ","-"," ","-"," ","-"],
-    [" ","-"," ","-","C"," ","-"," "," ","-","-"," "," "," ","-","-"," ","-"," ","-"],
-    [" ","-"," ","-","-"," ","-","-"," ","-","-","-","-"," ","-","-"," ","-"," ","-"],
-    [" ","-"," "," "," "," ","-"," "," "," "," "," "," "," "," "," "," "," "," ","-"],
+    ["-","-"," ","-"," ","-","-","-"," ","-","-"," "," "," "," ","-"," ","-"," ","-"],
+    ["-"," "," ","-"," "," ","-"," "," ","-","-"," "," "," ","-","-"," ","-"," ","-"],
+    ["-"," ","-","-"," "," ","-","-"," ","-","-","-","-"," ","-","-"," ","-"," ","-"],
+    [" "," ","-","C"," "," ","-"," "," "," "," "," "," "," "," "," "," "," "," ","-"],
     ["S","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-","-"],
     ];
-//    console.log(mapEasy[0][0]);
+//    console.log(mapMedium[0][0]);
     function test(position) { //Tels the actual position of the player
         const {x, y} = position;
-        return mapEasy[x][y];
+        return mapMedium[x][y];
     }
 var player = { //Start position 
     x: 19,
@@ -44,16 +44,16 @@ function displayPlayer(oldPosition, newPosition){
 function move(e){ //Move into the array
     let newPosition = {x: player.x, y: player.y};
 //    console.log(e.code);
-    if (e.code == 'ArrowUp'){ //up
+    if (e.code == 'ArrowDown'){ //up
         newPosition.x -= 1;
     }
-    else if (e.code == 'ArrowDown'){ //down
+    else if (e.code == 'ArrowUp'){ //down
         newPosition.x += 1;
     }
-    else if (e.code == 'ArrowLeft'){ //left
+    else if (e.code == 'ArrowRight'){ //left
         newPosition.y -= 1;
     }
-    else if (e.code == 'ArrowRight') { //right
+    else if (e.code == 'ArrowLeft') { //right
         newPosition.y += 1;
     }else {return};
 
@@ -83,7 +83,7 @@ function touchBitcoin(position){
     player.coins += 1;
     const btc = mapElem(position);
     btc.classList.remove("coin");
-    mapEasy[position.y][position.x] = " ";
+    mapMedium[position.y][position.x] = " ";
     // console.log('bitcoin');
     // console.log(player.coins);
     const nbBTC = document.querySelector('footer');
@@ -99,21 +99,21 @@ const mapElem = position => document.getElementById(position.y+"."+position.x);
 function putArrayInGrid(){ //Look into the array to see if there's an obstable or not. If there's one it create a div with a class in the HTML
     let testGrid = document.querySelector(".game-inside");
     let innerHTMLLab = "";
-    for (let i = 0; i < mapEasy.length; i++){
-        for (let j = 0; j < mapEasy[i].length; j++){
-           if (mapEasy[i][j] === " "){
+    for (let i = 0; i < mapMedium.length; i++){
+        for (let j = 0; j < mapMedium[i].length; j++){
+           if (mapMedium[i][j] === " "){
                innerHTMLLab += '<div class="map" id='+ j+"."+i +'></div>';
            }
-           if (mapEasy[i][j] === "-"){
+           if (mapMedium[i][j] === "-"){
             innerHTMLLab += '<div class="black-square" id='+ j+"."+i +' ></div>';
            }
-           if (mapEasy[i][j] === "S"){
+           if (mapMedium[i][j] === "S"){
             innerHTMLLab += '<div class="player start"  id='+ j+"."+i +'></div>';
            }
-           if (mapEasy[i][j] === "e"){
+           if (mapMedium[i][j] === "e"){
             innerHTMLLab += '<div class="end"  id='+ j+"."+i +'></div>';
            }
-           if (mapEasy[i][j] === "C"){
+           if (mapMedium[i][j] === "C"){
             innerHTMLLab += '<div class="coin"  id='+ j+"."+i +'></div>';
            }
         }

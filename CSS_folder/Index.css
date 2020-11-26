@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -5,4 +6,5 @@
 }
 :root{
     --color-h1: #F0F1FE;
+    --font-all: 'Cairo', sans-serif;
 }

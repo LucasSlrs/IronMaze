@@ -1,6 +1,7 @@
 @import url('./Index.css');
 
 body{
+    font-family: var(--font-all);
     background-image: url('../images/Background-game.jpg');
 }
 h1{
