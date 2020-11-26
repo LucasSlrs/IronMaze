@@ -69,14 +69,14 @@ function move(e){ //Move into the array
         }
         if (test(newPosition)=== "e"){
             endGame();
-            alert('You won the game, congratulations!');
+            alert(`You won in ${time} seconds, and you earn ${player.coins} Bitcoin(s).`);
         }
     }
 //    console.log(player);
 }
 function endGame(){
     clearInterval(timerID);
-    console.log(`You win in ${time} seconds, and you earn ${player.coins} Bitcoin(s). I hope you put them in a wallet.`);
+    // console.log(`You win in ${time} seconds, and you earn ${player.coins} Bitcoin(s).`);
 }
 
 //if a coin is touched, the coin disapear after
@@ -130,6 +130,8 @@ const timerID = setInterval(() => {
     const timePrinter = document.querySelector('#print-time');
     timePrinter.innerHTML = `Timer: ${time}`;
 }, 1000);
+
+
 
 //console.log("Welcome");
 window.addEventListener('keydown', move);

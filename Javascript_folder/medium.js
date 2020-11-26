@@ -69,7 +69,7 @@ function move(e){ //Move into the array
         }
         if (test(newPosition)=== "e"){
             endGame();
-            alert('You won the game, congratulations!');
+            alert(`You won in ${time} seconds, and you earn ${player.coins} Bitcoin(s).`);
         }
     }
 //    console.log(player);

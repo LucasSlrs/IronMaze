@@ -13,9 +13,12 @@ h1{
     position: relative;
     text-align: center;
 }
+p{
+    text-align: center;
+}
 
 .btn{
-    margin: 3%;
+    margin: 1%;
     text-decoration: none;
     text-align: center;
     width: 10%;
@@ -26,7 +29,7 @@ h1{
     background-color: var(--color-h1);
 }
 hr{
-    margin: 1% 35%;
+    margin: 0 35%;
 }
 #test{
     display: grid;
@@ -35,17 +38,18 @@ hr{
 .game-inside{
     box-shadow: 10px 5px 5px black;;
     border: 2px solid black;
-    width: 500px;
+    width: 450px;
     height: 400px;
     display: grid;
     grid-template-columns: repeat(20, 20px [row-start]);
     justify-content: center;
-    animation: rotation 10s infinite linear;
+    animation: rotation 12s infinite linear;
     
     
 }
 .black-square{
-    background-image: url("../images/dry-clean.png");
+    background-image: url("../images/tree-solid.svg");
+    background-size: 19px;
 }
 .map{
     background-color: var (--color-h1);
@@ -70,7 +74,8 @@ hr{
     border-radius: 50%;
 }
 .end{
-    background-color: turquoise;
+    background-image: url("../images/sign-out-alt-solid.svg");
+    background-size: 19.6px;
 }
 #print-btc{
     font-size: 20px;
