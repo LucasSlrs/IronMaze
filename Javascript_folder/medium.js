@@ -69,6 +69,7 @@ function move(e){ //Move into the array
         }
         if (test(newPosition)=== "e"){
             endGame();
+            alert('You won the game, congratulations!');
         }
     }
 //    console.log(player);
@@ -83,12 +84,11 @@ function touchBitcoin(position){
     player.coins += 1;
     const btc = mapElem(position);
     btc.classList.remove("coin");
-    mapMedium[position.y][position.x] = " ";
+    mapMedium[position.x][position.y] = " ";
     // console.log('bitcoin');
     // console.log(player.coins);
-    const nbBTC = document.querySelector('footer');
-    printBtcInner = '<div class="print-btc"></div>';
-    nbBTC.printBtcInner.textContent = `${player.coins} Bitcoins`;
+    const nbBTC = document.querySelector('#print-btc');
+    nbBTC.innerHTML = `${player.coins} Bitcoin`;
 
 }
 //Get the actual position

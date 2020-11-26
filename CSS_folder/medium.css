@@ -1,49 +1,47 @@
 @import url("./Index.css");
 
 body{
+    font-family: var(--font-all);
+    color: var(--color-h1);
     height: 1vh;
     background-image: url('../images/Background-game.jpg');
 }
 h1{
-    margin-top: 5%;
+    margin-top: 1%;
+    font-family: var(--font-all);
     color: var(--color-h1);
     position: relative;
     text-align: center;
 }
-footer{
-    display: flex;
-    justify-content: center;
-    margin: 3%;
-    color: var(--color-h1);
-    font-size: 20px;
-}
+
 .btn{
-    margin: 1%;
+    margin: 3%;
     text-decoration: none;
     text-align: center;
     width: 10%;
     border: 1px solid white; 
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
     color: #040938;
-    background-color: #F0F1FE;
+    background-color: var(--color-h1);
 }
 hr{
     margin: 1% 35%;
 }
-section{
+#test{
     display: grid;
     justify-content: center;
 }
 .game-inside{
     box-shadow: 10px 5px 5px black;;
     border: 2px solid black;
-    width: 600px;
+    width: 500px;
     height: 400px;
     display: grid;
     grid-template-columns: repeat(20, 20px [row-start]);
     justify-content: center;
     animation: rotation 10s infinite linear;
+    
     
 }
 .black-square{
@@ -67,11 +65,20 @@ section{
     }
 }
 .player{
-    background-color: yellow;
+    background-image: url("../images/android-brands.svg");
+    background-color: gold;
+    border-radius: 50%;
 }
 .end{
     background-color: turquoise;
 }
-.print-btc{
-    justify-content: space-between;
+#print-btc{
+    font-size: 20px;
+    text-align: center;
+}
+#print-time{
+    font-size: 24px;
+    margin-top: 2%;
+    display: grid;
+    justify-content: center;
 }

@@ -2,6 +2,7 @@
 
 body{
     font-family: var(--font-all);
+    color: var(--color-h1);
     height: 1vh;
     background-image: url('../images/Background-game.jpg');
 }
@@ -12,14 +13,7 @@ h1{
     position: relative;
     text-align: center;
 }
-footer{
-    display: flex;
-    justify-content: center;
-    margin: 3%;
-    font-family: var(--font-all);
-    color: var(--color-h1);
-    font-size: 20px;
-}
+
 .btn{
     margin: 3%;
     text-decoration: none;
@@ -34,7 +28,7 @@ footer{
 hr{
     margin: 1% 35%;
 }
-section{
+#test{
     display: grid;
     justify-content: center;
 }
@@ -43,7 +37,6 @@ section{
     border: 2px solid black;
     width: 600px;
     height: 400px;
-    /* position: relative; */
     display: grid;
     grid-template-columns: repeat(20, 20px [row-start]);
     justify-content: center;
@@ -70,13 +63,20 @@ section{
     }
 }
 .player{
-    background-color: yellow;
-    /* top: 0;
-    left: 0; */
+    background-image: url("../images/android-brands.svg");
+    background-color: gold;
+    border-radius: 50%;
 }
 .end{
     background-color: turquoise;
 }
-.print-btc{
-    justify-content: space-between;
+#print-btc{
+    font-size: 20px;
+    text-align: center;
+}
+#print-time{
+    font-size: 24px;
+    margin-top: 2%;
+    display: grid;
+    justify-content: center;
 }
